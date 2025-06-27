@@ -1,8 +1,1 @@
 10
-100000
-1234567890123
-3.14
-2.71828
-Z
-Hello
-Hello , Get ready to start you competetive learning
