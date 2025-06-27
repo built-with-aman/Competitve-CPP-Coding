@@ -1,0 +1,8 @@
+int: 10
+long: 100000
+long long: 1234567890123
+float: 3.14
+double: 2.71828
+char: Z
+string (single word): Hello
+string:Hello , Get ready to start you competetive learning
