@@ -1,2 +1,5 @@
-value inside function :107
-value inside int main107
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
