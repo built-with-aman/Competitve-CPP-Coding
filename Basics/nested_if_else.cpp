@@ -28,35 +28,41 @@ Note:
 - Make sure to read input from "input.txt" and write output to "output.txt".
 */
 
-int main() {
-    #ifndef ONLINE_JUDGE
+int main()
+{
+#ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
-    #endif
+#endif
 
     int age;
     string qualification;
     int experience;
 
-    cin>>age>>qualification>>experience;
+    cin >> age >> qualification >> experience;
 
-    if (age>=18){
-        if(qualification =="Bachelors" || qualification=="Masters"){
-            if(experience>=2){
-             cout<<"You are eligible for the job."<<endl;
+    if (age >= 18)
+    {
+        if (qualification == "Bachelors" || qualification == "Masters")
+        {
+            if (experience >= 2)
+            {
+                cout << "You are eligible for the job." << endl;
             }
-            else{
-                cout<<"You need at least 2 years of experience."<<endl;
+            else
+            {
+                cout << "You need at least 2 years of experience." << endl;
             }
         }
-        else{
-            cout<<"You need at least a Bachelor's degree to apply."<<endl;
+        else
+        {
+            cout << "You need at least a Bachelor's degree to apply." << endl;
         }
-        
     }
-    else {
-            cout<<"You must be at least 18 years old to apply."<<endl;
-        }
+    else
+    {
+        cout << "You must be at least 18 years old to apply." << endl;
+    }
 
-        return 0;
-    }
+    return 0;
+}

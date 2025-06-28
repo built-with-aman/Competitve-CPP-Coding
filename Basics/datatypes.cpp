@@ -1,18 +1,18 @@
-#include<bits/stdc++.h> // it has all the libraries 
+#include <bits/stdc++.h> // it has all the libraries
 using namespace std;
 
-int main(){
+int main()
+{
 
-    #ifndef ONLINE_JUDGE
-freopen("input.txt", "r", stdin);
-freopen("output.txt", "w", stdout);
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
 #endif
     // some of the most used data types are
     // int,long, long long , float, double
-    //string and getline
-    //char
-    
- 
+    // string and getline
+    // char
+
     // int
     int a;
     cin >> a;
@@ -47,10 +47,10 @@ freopen("output.txt", "w", stdout);
     string g;
     cin >> g;
     cout << "string (single word): " << g << endl;
-    
-    //getline
-    cin.ignore(); 
+
+    // getline
+    cin.ignore();
     string str;
-    getline(cin , str);
-    cout<<"string: "<<str<<endl;
+    getline(cin, str);
+    cout << "string: " << str << endl;
 }

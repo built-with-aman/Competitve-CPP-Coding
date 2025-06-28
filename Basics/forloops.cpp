@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 int main()
@@ -10,8 +9,10 @@ int main()
     freopen("output.txt", "w", stdout);
 #endif
 
-    string name;
-    getline(cin, name); // reads full line from input.txt
-    cout << "Hello, " << name << endl;
+    for (int i = 1; i <= 15; i = i + 1)
+    {
+        cout << "AMAN" << endl;
+    }
+
     return 0;
 }
