@@ -3,7 +3,7 @@ using namespace std;
 
 // array elements are stored in consequetive memory loction
 //but it is not sure where is the starting element a[0] , it can be any where randomized
-// 1D ARRAY
+// 1D ARRAY :
 int main(){
      #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
