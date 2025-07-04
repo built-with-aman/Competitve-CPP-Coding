@@ -15,6 +15,7 @@ int main(){
     int n;
     cin >> n;
     cout << "Printing numbers from " << n << " to 1:" << endl;
-    printnumbers(n);
+    printnumbers(n, n); // starting from n to 1
+    cout << endl; // to add a new line after printing all numbers   
     return 0;
 }
