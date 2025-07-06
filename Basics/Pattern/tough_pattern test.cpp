@@ -102,5 +102,11 @@ pattern 10: 0-1 Pattern triangle
 0 1 0 1
 1 0 1 0 1
 
+PATTERN 11: u shaped pattern
+*       *
+*       *
+*       *
+*       *
+* * * * *
 
 */

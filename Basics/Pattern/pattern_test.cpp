@@ -95,6 +95,7 @@ using namespace std;
 //     return 0;
 
 // }
+//----------------------------------------------------------------------------------------------------------
 
 // pattern 5
 // a
@@ -115,6 +116,7 @@ using namespace std;
 // cout<< endl;
 //     }
 // }
+//----------------------------------------------------------------------------------------------------------
 
 // pattern 6:
 // a
@@ -140,6 +142,7 @@ using namespace std;
 //     return 0;
 // }
 
+//----------------------------------------------------------------------------------------------------------
 // pattern 7:
 
 // ######
@@ -149,12 +152,74 @@ using namespace std;
 // ##
 // #
 
-int main(){
-    int row, col;
-    for (row=6 ; row>=1; row--){
-        for(col=1; col<=row; col++){
-            cout<<"# ";
+// int main(){
+//     int row, col;
+//     for (row=6 ; row>=1; row--){
+//         for(col=1; col<=row; col++){
+//             cout<<"# ";
 
+//         }
+//         cout << endl;
+//     }
+//     return 0;
+// }
+//----------------------------------------------------------------------------------------------------------
+
+// pattern 8: 
+// A B C D E F 
+// G H I J K
+// L M N O
+// P Q R
+// S T
+// U
+// 
+// int main(){
+//     int row, col;
+//     char ch = 'A';
+//     for (row=6; row>=1; row--){
+//         for (col=1; col<=row; col++){
+//             cout << ch << " ";
+//             ch= ch + 1;
+//         }
+//         cout << endl;
+//     }
+//     return 0;
+// }
+ 
+//----------------------------------------------------------------------------------------------------------  
+// pattern 9:
+// A B C D E F
+// A B C D E
+// A B C D
+// A B C 
+// A B 
+// A 
+
+// int main(){
+//     int row, col;
+//     for (row = 6; row >= 1; row--) {
+//         char ch = 'A';
+//         for (col = 1; col <= row; col++) {
+//             cout << ch << " ";
+//             ch++;
+//         }
+//         cout << endl;
+//     }
+//     return 0;
+// }
+
+// pattern 10:
+// 5
+// 5 4
+// 5 4 3
+// 5 4 3 2
+// 5 4 3 2 1
+
+int main() {
+    int row, col;
+    for (row = 5; row >= 1; row--) {
+        for (col = 5; col >= row; col--) {
+            cout << col << " ";
         }
         cout << endl;
     }
