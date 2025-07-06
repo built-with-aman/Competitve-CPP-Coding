@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;        
 // Function to print numbers from 1 to n
-void printnumbers(int i ,int n)
+void printnumber1(int i ,int n)
 {
     // i is the current number to print
     // n is the limit up to which we want to print numbers
@@ -15,14 +15,42 @@ void printnumbers(int i ,int n)
 
     cout << i << " ";
     // means we are calling the function again with i incremented by 1
-    printnumbers(i + 1, n); 
+    printnumber1(i + 1, n); 
 }
 // function calling
 int main(){
     int n;
     cin>> n;
     cout << "Printing numbers from 1 to " << n << ":" << endl;
-    printnumbers(1, n); // starting from 1 to n
+    printnumber1(1, n); // starting from 1 to n
 }
 // Output will be numbers from 1 to n
 // Example: if n is 5, the output will be 1 2 3 4 5
+
+/************************************************************************************************** */
+
+// Comment out the above code (either the first or second main function) to avoid multiple definition errors.
+// Only one main() function should be active at a time to see the output for that part.
+// LETS USE BACKTRACING TO PRINT NUMBERS FROM 1 TO N
+#include <iostream>
+using namespace std;
+void printnumbers2(int i, int n)
+{
+    // base case: if i is greater than n, we stop the recursion
+    if (i > n) {
+        return;
+    }
+    // first call the function with i+1 (backtracking)
+    printnumbers2(i + 1, n);
+    cout << i << " "; // print the current number after the recursive call
+}
+
+// FUNCTION CALLING
+int main() {
+    int n;
+    cin >> n;
+    cout << "Printing numbers from 1 to " << n << " using backtracking:" << endl;
+    printnumbers2(1, n); // starting from 1 to n
+    cout << endl; // to add a new line after printing all numbers
+    return 0;
+}
