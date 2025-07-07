@@ -191,3 +191,37 @@ int main(){
 //         return 0;
     
 //     }
+
+
+// pattern 8:
+//     1
+//    121
+//   12321
+//  1234321
+// 123444321
+
+int main (){
+    int row;
+    int total_rows=5;
+    
+    for (row = 1; row <= total_rows; row++) {
+        // Print spaces
+        for (int space = 1; space <= total_rows - row; space++) {
+            cout << " ";
+        }
+
+        // Print increasing numbers
+        for (int num = 1; num <= row; num++) {
+            cout << num;
+        }
+
+        // Print decreasing numbers
+        for (int num = row - 1; num >= 1; num--) {
+            cout << num;
+        }
+
+        cout << endl;
+    }
+
+    return 0;
+}
