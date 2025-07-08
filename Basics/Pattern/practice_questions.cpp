@@ -224,6 +224,36 @@ int main()
 
 b) similar to pattern 2: try yourself;
 -------------------------------------------------------------------------------------------------------------------------
+pattern 4: 
+
+int main() {
+    int n;
+    cout << "Enter number of rows: ";
+    cin >> n;
+
+    for (int i = 1; i <= n; i++) {
+        // Print leading spaces
+        for (int space = 1; space <= n - i; space++) {
+            cout << "  ";
+        }
+
+        // Print decreasing numbers
+        for (int num = i; num >= 1; num--) {
+            cout << num << " ";
+        }
+
+        // Print increasing numbers starting from 2 to i
+        for (int num = 2; num <= i; num++) {
+            cout << num << " ";
+        }
+
+        cout << endl;
+    }
+
+    return 0;
+}
+
+-------------------------------------------------------------------------------------------------------------------------
 pattern 12:
 
 Ternary:
@@ -236,7 +266,9 @@ if (a > b) {
   result = b;
 }
 */
-// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -SOL IS BELOW-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -int main()
+// -- -- -SOL IS BELOW-- -- - -- -
+//method 1
+
 // int main(){
 //   int row, col;
 //   int n;
@@ -363,43 +395,44 @@ int main()
 44
 45     return 0;
 46 }
-
+-------------------------------------------------------------------------------------------------------------------------
 */
 
 /*pattern 13
-*/
 
 
 int main() {
-    int n;
-    cout << "Enter number of rows for half diamond (e.g., 4): ";
-    cin >> n;
-
-    // Upper half
-    for (int i = 1; i <= n; i++) {
-        // Print spaces
-        for (int j = 1; j <= n - i; j++) {
-            cout << " ";
-        }
-        // Print stars with spaces
-        for (int j = 1; j <= i; j++) {
-            cout << "* ";
-        }
-        cout << endl;
+  int n;
+  cout << "Enter number of rows for half diamond (e.g., 4): ";
+  cin >> n;
+  
+  // Upper half
+  for (int i = 1; i <= n; i++) {
+    // Print spaces
+    for (int j = 1; j <= n - i; j++) {
+      cout << " ";
     }
-
-    // Lower half
-    for (int i = n - 1; i >= 1; i--) {
-        // Print spaces
-        for (int j = 1; j <= n - i; j++) {
-            cout << " ";
-        }
-        // Print stars with spaces
-        for (int j = 1; j <= i; j++) {
-            cout << "* ";
-        }
-        cout << endl;
+    // Print stars with spaces
+    for (int j = 1; j <= i; j++) {
+      cout << "* ";
     }
-
-    return 0;
+    cout << endl;
+  }
+  
+  // Lower half
+  for (int i = n - 1; i >= 1; i--) {
+    // Print spaces
+    for (int j = 1; j <= n - i; j++) {
+      cout << " ";
+    }
+    // Print stars with spaces
+    for (int j = 1; j <= i; j++) {
+      cout << "* ";
+    }
+    cout << endl;
+  }
+  
+  return 0;
 }
+----------------------------------------------------------------------------------------------------------------------------
+*/
