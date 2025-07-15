@@ -12,18 +12,31 @@
 
 #include<bits/stdc++.h>
 using namespace std;
+#include <iostream>
+#include <queue>
+#include <vector>
+using namespace std;
 
-int main(){
-    priority_queue<int> pq;
-    pq.push(1);
-    pq.push(3);
-    pq.push(2); // push is used to add an element to the priority queue
+// Marks ke basis pe min heap banega
+struct Compare {
+    bool operator()(const pair<int, int>& a, const pair<int, int>& b) {
+        return a.second > b.second;
+    }
+};
 
-    cout<<pq.top()<<endl; // top is used to access the highest priority element
-    pq.pop(); // pop is used to remove the highest priority element
+int main() {
+    // Priority queue with custom comparator
+    priority_queue<pair<int, int>, vector<pair<int, int>>, Compare> pq;
 
-    cout<<pq.top()<<endl; // after popping, the new highest priority element is displayed
-    cout<<pq.size()<<endl; // size is used to get the number of elements in the priority queue
-    cout<<pq.empty()<<endl; // empty is used to check if the priority queue is empty
+    pq.push({1, 80}); // Roll 1, Marks 80
+    pq.push({2, 50});
+    pq.push({3, 60});
+
+    while (!pq.empty()) {
+        auto top = pq.top();
+        cout << "Roll: " << top.first << ", Marks: " << top.second << endl;
+        pq.pop();
+    }
+
     return 0;
 }
