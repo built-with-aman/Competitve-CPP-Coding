@@ -95,9 +95,9 @@ void deletenode(linkedlist* &head, int nth) {
             curr = curr->next;
             count++;
         }
-
+// it handles many conditions like position out of range, deleting the last node, and deleting the only node
         if(curr == nullptr){
-            cout << "Position out of range" << endl;
+            cout << "Position out of range" << endl;    
             return;
         }
 

@@ -6,7 +6,7 @@ class linkedlist{
   int data;
   linkedlist* next;  // pointer to the next node
 
-  // constructor
+  // constructor n 
   linkedlist(int val)
 {
   data=val; // initialize data
