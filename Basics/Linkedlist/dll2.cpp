@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-// wheen head tail are null 
+//head and tail are always non-null
 // Node class
 class Node {
 public:
@@ -25,34 +25,20 @@ void print(Node* head) {
     cout << endl;
 }
 
-// Insert at head
+// Insert at head (head and tail are always non-null)
 void insertAtHead(Node* &head, Node* &tail, int d) {
     Node* temp = new Node(d);
     temp->next = head;
-    temp->prev = nullptr;
-
-    if (head != nullptr)
-        head->prev = temp;
+    head->prev = temp;
     head = temp;
-
-    // If list was empty, update tail
-    if (tail == nullptr)
-        tail = temp;
 }
 
 // Insert at tail
 void insertAtTail(Node* &head, Node* &tail, int d) {
     Node* temp = new Node(d);
+    tail->next = temp;
     temp->prev = tail;
-    temp->next = nullptr;
-
-    if (tail != nullptr)
-        tail->next = temp;
     tail = temp;
-
-    // If list was empty, update head
-    if (head == nullptr)
-        head = temp;
 }
 
 // Insert at any given position (1-based indexing)
@@ -70,7 +56,7 @@ void insertAtPosition(Node* &head, Node* &tail, int position, int d) {
         count++;
     }
 
-    // Insert at tail if we reached the end
+    // Insert at tail if reached end
     if (temp->next == nullptr) {
         insertAtTail(head, tail, d);
         return;
@@ -97,11 +83,11 @@ int getLength(Node* head) {
 
 // Main function
 int main() {
-    Node* head = nullptr;
-    Node* tail = nullptr;
+    // Start with one node; head and tail are non-null
+    Node* node1 = new Node(10);
+    Node* head = node1;
+    Node* tail = node1;
 
-    // Initial node
-    insertAtHead(head, tail, 10);
     print(head);  // 10
 
     insertAtHead(head, tail, 12);
@@ -116,8 +102,7 @@ int main() {
     insertAtPosition(head, tail, 2, 20);
     print(head);  // 15 20 12 10 22
 
-    int len = getLength(head);
-    cout << "Length: " << len << endl;  // Length: 5
+    cout << "Length: " << getLength(head) << endl;  // Length: 5
 
     return 0;
 }
