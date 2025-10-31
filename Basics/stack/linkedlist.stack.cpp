@@ -1,4 +1,7 @@
 #include <iostream>
+#include <stack>
+#include <vector>
+
 using namespace std;
 
 // create stack using linked list  
